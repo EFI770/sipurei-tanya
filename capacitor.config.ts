@@ -1,7 +1,7 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'il.efi770.sipureitanya',
+  appId: 'sipureitanya.co.il',
   appName: 'סיפורי תניא',
   webDir: '.',
   server: {
