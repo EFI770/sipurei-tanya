@@ -1,22 +1,35 @@
 {
   "name": "סיפורי תניא",
   "short_name": "סיפורי תניא",
-  "description": "סיפורים חסידיים לכל פרקי התניא ממקורות חב\"דיים",
+  "description": "סיפורים חסידיים לכל פרקי התניא ממקורות חב\"דיים, עם מקור לכל סיפור",
   "start_url": "/",
+  "scope": "/",
+  "id": "/",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
   "orientation": "portrait",
+  "lang": "he",
+  "dir": "rtl",
+  "categories": ["books", "education", "lifestyle"],
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "/icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "icon-512.png",
+      "src": "/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ]
 }
