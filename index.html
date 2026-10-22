@@ -2,16 +2,20 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0f172a">
 <title>סיפורי תניא</title>
+<link rel="manifest" href="manifest.json">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: system-ui, -apple-system, sans-serif; background: #0f172a; color: #e2e8f0; line-height: 1.6; }
-  header { background: #1e293b; padding: 1.2rem 1rem; text-align: center; border-bottom: 1px solid #334155; }
+  body { font-family: system-ui, -apple-system, sans-serif; background: #0f172a; color: #e2e8f0; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  header { background: #1e293b; padding: 1.2rem 1rem; text-align: center; border-bottom: 1px solid #334155; padding-top: env(safe-area-inset-top); }
   .dedication { background: #0f172a; color: #fbbf24; padding: 0.6rem 1rem; font-size: 1rem; font-weight: 500; border-bottom: 1px solid #334155; text-align: center; }
   h1 { font-size: 1.4rem; font-weight: 600; }
   .chapters { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 1rem; justify-content: center; }
-  .chap-btn { background: #334155; color: #f1f5f9; border: none; padding: 0.6rem 1rem; border-radius: 8px; cursor: pointer; font-size: 0.95rem; }
+  .chap-btn { background: #334155; color: #f1f5f9; border: none; padding: 0.6rem 1rem; border-radius: 8px; cursor: pointer; font-size: 0.95rem; touch-action: manipulation; }
   .chap-btn.active { background: #3b82f6; }
   .content { padding: 1rem 1.2rem 3rem; max-width: 700px; margin: 0 auto; }
   .summary { background: #1e293b; padding: 1rem; border-radius: 10px; margin-bottom: 1.2rem; border-right: 3px solid #3b82f6; }
@@ -20,7 +24,6 @@
   .source { margin-top: 0.6rem; font-size: 0.82rem; opacity: 0.75; border-top: 1px solid #334155; padding-top: 0.4rem; }
   .source a { color: #93c5fd; }
   .empty { text-align: center; opacity: 0.6; padding: 1.5rem 0; }
-  .hidden { display: none; }
 </style>
 </head>
 <body>
@@ -29,10 +32,8 @@
   <h1>סיפורים חסידיים לספר התניא</h1>
   <p style="opacity:0.7; font-size:0.85rem; margin-top:0.3rem;">ליקוטי אמרים – סיפורים ממקורות חב"דיים, עם מקור לכל סיפור</p>
 </header>
-
 <div class="chapters" id="chapters"></div>
 <div class="content" id="content"></div>
-
 <script>
 const data = {
   "1": {
@@ -756,7 +757,7 @@ const data = {
   },
   "27": {
     "title": "פרק כ\"ז",
-    "summary": "סיפורים חסידיים התואמים לתוכן פרק כ\"ז במקורות חב\"דיים",
+    "summary": "סיפורים חסידיים התואמים לתוכן פרק כ\"ז",
     "stories": [
       {
         "t": "\"אולי לכך נברא\"",
@@ -922,9 +923,44 @@ const data = {
     "title": "פרק נ\"ג",
     "summary": "תקציר פרק נ\"ג יתווסף בהמשך.",
     "stories": []
+  },
+  "54": {
+    "title": "פרק ל'",
+    "summary": "ביאור כיצד הבינוני יכול להתגבר על היצר בכל עת.",
+    "stories": [
+      {
+        "t": "מלחמת הבינוני המתמדת",
+        "d": "אדמו\"ר הזקן הדגיש בשיחותיו כי הבינוני נלחם תמיד עם היצר, וכל דחייה של מחשבה זרה היא ניצחון גדול.",
+        "s": "בית רבי, חלק א, פרק על עבודת החסידים, עמ' קמ\"ח–ק\"נ. ספר השיחות תש\"ג, עמ' 89 (אדמו\"ר הריי\"צ).",
+        "u": ""
+      }
+    ]
+  },
+  "55": {
+    "title": "פרק מ\"א",
+    "summary": "עמידה לפני המלך – אהבה ויראה.",
+    "stories": [
+      {
+        "t": "כעומד לפני המלך",
+        "d": "הרבי הדגיש פעמים רבות את לימוד פרק מ\"א עד המילים \"כעומד לפני המלך\" וחזרתו בעל פה.",
+        "s": "אגרות קודש הרבי, כרך א' עמ' קנג; כרך ג' עמ' קעג ועוד. שיחות קודש.",
+        "u": ""
+      }
+    ]
+  },
+  "56": {
+    "title": "פרק נ\"ג",
+    "summary": "מעלת העשייה בגשמיות – דירה בתחתונים.",
+    "stories": [
+      {
+        "t": "מעשה הוא העיקר",
+        "d": "אדמו\"ר הזקן לימד שהמעשה הגשמי של המצוות הוא העיקר, כפי שסיפר הרבי על הליכתו לעזור ליולדת ביום כיפור.",
+        "s": "בית רבי, חלק א, עמ' ק\"ס. שיחת אדמו\"ר הריי\"צ (מובאת בתורת מנחם).",
+        "u": ""
+      }
+    ]
   }
 };
-
 function renderChapters() {
   const cont = document.getElementById('chapters');
   for (let i = 1; i <= 53; i++) {
@@ -935,7 +971,6 @@ function renderChapters() {
     cont.appendChild(btn);
   }
 }
-
 function showChapter(n) {
   document.querySelectorAll('.chap-btn').forEach((b, i) => b.classList.toggle('active', i+1 === n));
   const ch = data[n];
@@ -947,18 +982,13 @@ function showChapter(n) {
   let html = `<div class="summary"><strong>${ch.title}</strong><br>${ch.summary}</div>`;
   if (ch.stories && ch.stories.length) {
     ch.stories.forEach(s => {
-      html += `<div class="story">
-        <h3>${s.t}</h3>
-        <div>${s.d}</div>
-        <div class="source">מקור: ${s.s}${s.u ? ` – <a href="${s.u}" target="_blank">קישור</a>` : ''}</div>
-      </div>`;
+      html += `<div class="story"><h3>${s.t}</h3><div>${s.d}</div><div class="source">מקור: ${s.s}${s.u ? ` – <a href="${s.u}" target="_blank">קישור</a>` : ''}</div></div>`;
     });
   } else {
     html += '<div class="empty">סיפורים לפרק זה יתווספו בקרוב</div>';
   }
   cont.innerHTML = html;
 }
-
 renderChapters();
 showChapter(1);
 </script>
