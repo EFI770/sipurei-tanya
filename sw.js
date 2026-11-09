@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sipurei-tanya-v1';
+const CACHE_NAME = 'sipurei-tanya-v2';
 const ASSETS = [
   '/',
   '/index.html',
